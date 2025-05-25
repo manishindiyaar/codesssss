@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three</title>
+</head>
+<body>
+    
+    <h1>Question No.3 Assignment 2</h1>
+
+    <p id="result"></p>
+   
+    <script>
+
+        const name = prompt("Enter your name: ");
+        const rollNo = prompt("Enter your roll number: ");
+        const branch = prompt("Enter your branch: ");
+        const marks = [];
+        for (let i=1; i<=5; i++){
+            marks.push(parseInt(prompt("Enter marks for subject "+ i+ ": ")));
+        }
+        let total = 0;
+        for (let i=0; i<marks.length; i++){
+            total += marks[i];
+        }
+        let average = total / marks.length;
+        console.log("Name: "+ name);
+        console.log("Roll Number: "+ rollNo);
+        console.log("Branch: "+ branch);
+        console.log("Marks: "+ marks);
+        console.log("Total: "+ total);
+        console.log("Average: "+ average);
+        
+        document.getElementById('result').innerHTML = "Name: "+ name+ "<br>Roll Number: "+ rollNo+ "<br>Branch: "+ branch+ "<br>Marks: "+ marks+ "<br>Total: "+ total+ "<br>Average: "+ average;
+
+    </script>
+</body>
+</html>

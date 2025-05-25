@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            transition: background-color 0.5s;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .input-section {
+            margin: 20px 0;
+        }
+        input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        #itemList {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Interactive Features</h2>
+        
+        <!-- Color Change Section -->
+        <div>
+            <button onclick="changeBackgroundColor()">Change Background Color</button>
+        </div>
+
+        <!-- List Section -->
+        <div class="input-section">
+            <h3>Add Items to List</h3>
+            <input type="text" id="itemInput" placeholder="Enter an item">
+            <button onclick="addItem()">Add Item</button>
+            <ul id="itemList"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Array of colors for background
+        const colors = ['#FFE4E1', '#E6E6FA', '#F0FFF0', '#F5F5DC', '#F0F8FF'];
+        let currentColorIndex = 0;
+
+        // Function to change background color
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        // Function to add items to list
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const list = document.getElementById('itemList');
+            
+            // Check if input is empty
+            if (input.value.trim() === '') {
+                alert('Please enter an item');
+                return;
+            }
+
+            // Create new list item
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            list.appendChild(li);
+
+            // Clear input field
+            input.value = '';
+            input.focus();
+        }
+
+        // Add enter key support for adding items
+        document.getElementById('itemInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addItem();
+            }
+        });
+    </script>
+</body>
+</html>

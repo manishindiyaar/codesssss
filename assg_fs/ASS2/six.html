@@ -1,0 +1,36 @@
+<!-- 
+ Create a webpage with JavaScript to:
+• Check if a number entered by the user is even or odd using conditionals.
+• Print numbers from 1 to 10 using a loop.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six</title>
+ </head>
+ <body>
+
+    <h1>Question No.6 Assignment 2</h1>
+
+    <p>Enter a number to check if it is even or odd:</p>
+    <input type="number" id="number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let number = document.getElementById('number').value;
+            let resultDiv = document.getElementById('result');
+            if (number % 2 === 0) {
+                resultDiv.textContent = `${number} is Even`;
+            } else {
+                resultDiv.textContent = `${number} is Odd`;
+            }
+        }
+    </script>
+    
+ </body>
+ </html>

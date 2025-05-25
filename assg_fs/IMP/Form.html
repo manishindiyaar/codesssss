@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><font color="blue">Please Enter the following biodata</font></h1>
+    <form name="form1" method="get" action>
+        First Name: <input type="text" name="Fname" size="25" maxlength="25" placeholder="Enter Your name">
+        
+        <input type="button" value="Enter">
+
+        <br>
+
+        Middle Name: <input type="text" name="Mname" size="25" maxlength="25" placeholder="Enter middle name(disabled)" disabled>
+        
+        <br>
+
+        Last Name: <input type="text" name="Lname" size="25" maxlength="25" placeholder="Enter last name">
+        
+        <input type="button" value="Enter">
+        <br>
+
+        Nationality: <select name
+        ="Nationality">
+            <option value="Indian">Indian</option>
+            <option value="American">American</option>
+            <option value="British">British</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Italian">Italian</option>
+            <option value="Spanish">Spanish</option>
+        </select>
+        <br><br>
+
+        Select State: <br>
+        Maharashtra : <input type="radio" name="state" checked><br>
+        Madhya Pradesh<input type="radio" name="state"><br>
+        Gujrat<input type="radio" name="state"><br><br>
+        Address: <br><textarea cols="30" rows="10" name="address"></textarea><br><br>
+        Select Language: <br>
+        English<input type="checkbox" name="language"><br>
+        Hindi<input type="checkbox" name="language"><br>
+        Regional<input type="checkbox" name="language"><br><br>
+        The Phone Number: <input type="text" name="phone" size="15" maxlength="12" placeholder="Enter phone number">
+        <input type="button" value="Enter"><br><br>
+
+        Age: <input type="number" name="age" size="25" maxlength="2" min="18" max="70" placeholder="Age"><br><br>
+        password: <input type="password" name="password" size="25" maxlength="25" required autofocus>
+        <input type="button" value="Enter">
+        <br><br>
+        
+        <input type="file" name="myfile" size="30" multiple accept="pdf">
+        <input type="submit" value="Submitfile"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"><br><br>
+        click this image<br>
+        <input type="image" src="html.png" >
+
+    </form>
+</body>
+</html>

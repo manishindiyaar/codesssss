@@ -1,0 +1,44 @@
+<!-- 
+ 
+Create a webpage with JavaScript to:
+• Check if a number entered by the user is positive, negative, or zero using conditionals.
+• Display an alert box to display a welcome message “Welcome to UAI”.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine Question</title>
+</head>
+
+
+<body>
+
+    <h1>Question No.9 Assignment 2</h1>
+
+    <p>Enter a number to check if it is positive, negative, or zero:</p>
+    <button onclick="startProgram()"> start program</button>
+
+    <script>
+        function startProgram() {
+            alert("Welcome to UAI");
+            checkNumber();
+        }
+
+        function checkNumber() {
+            const number = parseInt(prompt("Enter a number: "));
+            if (number > 0) {
+                alert("The number is positive.");
+            } else if (number < 0) {
+                alert("The number is negative.");
+            } else {
+                alert("The number is zero.");
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

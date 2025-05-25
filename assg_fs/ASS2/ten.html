@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Lists Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        ol {
+            text-align: left;
+            margin: auto;
+            width: 50%;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background-color: lightgray;
+        }
+
+        button:hover {
+            background-color: cyan;
+        }
+    </style>
+    <script>
+        function verifyData() {
+            let name = prompt("Enter your Name:");
+            if (name) {
+                document.getElementById("displayData").innerHTML = "<b>Name:</b> " + name;
+            }
+        }
+
+        function changeColor() {
+            let colors = ["lightblue", "lightgreen", "lightpink", "lavender", "beige", "lightyellow"];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Preceding Text</h2>
+
+    <ol type="I">
+        <li>List Item 1
+            <ol type="a">
+                <li>Nested Item 1.1</li>
+                <li>Nested Item 1.2</li>
+            </ol>
+        </li>
+        <li>List Item 2
+            <ol type="1">
+                <li>Nested Item 2.1</li>
+                <li>Nested Item 2.2
+                    <ol type="circle">
+                        <li>Nested Item 2.2.1</li>
+                        <li>Nested Item 2.2.2
+                            <ul>
+                                <li>Nested Item 2.2.2.1</li>
+                                <li>Nested Item 2.2.2.2</li>
+                            </ul>
+                        </li>
+                        <li>Nested Item 2.2.3</li>
+                    </ol>
+                </li>
+                <li>Nested Item 2.3</li>
+            </ol>
+        </li>
+        <li>List Item 3
+            <ul>
+                <li>Nested Item 3.1</li>
+                <li>Nested Item 3.1</li>
+                <li>Nested Item 3.1</li>
+            </ul>
+        </li>
+    </ol>
+
+    <br>
+    <button onclick="verifyData()">Verify Data</button>
+    <button onclick="changeColor()">Change Color</button>
+    <p id="displayData"></p>
+
+</body>
+</html>

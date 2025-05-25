@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        #message {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Button Demo</h2>
+    
+    <!-- Button and paragraph -->
+    <button onclick="handleClick()">Click Me!</button>
+    
+    <p id="message">This text will change when you click the button.</p>
+
+    <script>
+        function handleClick() {
+            // Display alert message
+            alert("Hello! You clicked the button!");
+            
+            // Change paragraph text
+            let paragraph = document.getElementById("message");
+            paragraph.textContent = "The text has been changed by clicking the button!";
+        }
+    </script>
+</body>
+</html>

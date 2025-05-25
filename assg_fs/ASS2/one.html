@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One</title>
+    <link rel="stylesheet" href="one.css">
+</head>
+<body>
+    <div class="container">
+        <form id="accountForm" class="form-box">
+            <h2>Create Account</h2>
+            <div class="input-group">
+                <label>First name *</label>
+                <input type="text" required placeholder="Enter your first name">
+                <label>Last name</label>
+                <input type="text" placeholder="Enter your last name">
+            </div>
+            
+            <div class="input-group">
+                <label>Email *</label>
+                <input type="email" required placeholder="Enter your email">
+            </div>
+            
+            <div class="input-group">
+                <label>Password *</label>
+                <input type="password" required placeholder="Enter your password">
+                <label>Confirm Password *</label>
+                <input type="password" required placeholder="Enter your password again">
+            </div>
+            
+            <div class="input-gender">
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+            
+            <div class="input-check">
+                <label>Hobbies:</label>
+                <input type="checkbox" value="music"> Music
+                <input type="checkbox" value="sports"> Sports
+                <input type="checkbox" value="travel"> Travel
+                <input type="checkbox" value="movies"> Movies
+            </div>
+            
+            <div class="input-group">
+                <label>Source of Income:</label>
+                <select>
+                    <option>Employed</option>
+                    <option>Self-Employed</option>
+                    <option>Unemployed</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label>Income:</label>
+                <input type="range" min="0" max="100" step="10">
+            </div>
+            
+            <div class="input-group">
+                <label>Upload Profile Picture:</label>
+                <input type="file">
+            </div>
+            
+            <div class="input-group">
+                <label>Age:</label>
+                <input type="number" value="18">
+            </div>
+            
+            <div class="input-group">
+                <label>Bio:</label>
+                <textarea placeholder="Tell us about yourself"></textarea>
+            </div>
+            
+            <button type="button" onclick="confirmSubmission()">Create</button>
+        </form>
+    </div>
+    
+    <script>
+        function confirmSubmission() {
+            if (confirm("Do you really want to create?")) {
+                alert("You have successfully created the account");
+            } else {
+                alert("You have discarded the create request");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .form-label {
+            width: 30%;
+            text-align: right;
+            padding-right: 15px;
+            color: #555;
+        }
+        .form-input {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+        .form-input input, 
+        .form-input select, 
+        .form-input textarea {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-input textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            background-color: #999;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-send {
+            background-color: #e9a748;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-send:hover {
+            background-color: #d89632;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .modal-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-ok {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-cancel {
+            background-color: #f44336;
+            color: white;
+        }
+        .message-box {
+            display: none;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .success-message {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .error-message {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-title">Contact Us Today!</h2>
+        <form id="contactForm">
+            <div class="form-row">
+                <div class="form-label">First Name</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F464;</span>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Last Name</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F464;</span>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">E-Mail</div>
+                <div class="form-input">
+                    <span class="icon">&#x2709;</span>
+                    <input type="email" placeholder="E-Mail Address" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Phone #</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F4DE;</span>
+                    <input type="tel" placeholder="(845)555-1212">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Address</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F3E0;</span>
+                    <input type="text" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">City</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F3E0;</span>
+                    <input type="text" placeholder="City">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">State</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F5FA;</span>
+                    <select>
+                        <option selected disabled>Please select your state</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <!-- More states would go here -->
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Zip Code</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F3E0;</span>
+                    <input type="text" placeholder="Zip Code">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Website or domain name</div>
+                <div class="form-input">
+                    <span class="icon">&#x1F310;</span>
+                    <input type="text" placeholder="Website or domain name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Do you have hosting?</div>
+                <div class="form-input">
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="hosting-yes" name="hosting" value="yes">
+                            <label for="hosting-yes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="hosting-no" name="hosting" value="no">
+                            <label for="hosting-no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Project Description</div>
+                <div class="form-input">
+                    <span class="icon">&#x270F;</span>
+                    <textarea placeholder="Project Description"></textarea>
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button type="button" class="btn-send" id="sendBtn">
+                    Send &#x27A4;
+                </button>
+            </div>
+            
+            <div id="successMessage" class="message-box success-message">
+                That's great. Go ahead
+            </div>
+            
+            <div id="errorMessage" class="message-box error-message">
+                User does not want to continue
+            </div>
+        </form>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <p>Do you want to continue?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn btn-ok" id="btnOk">Ok</button>
+                <button class="modal-btn btn-cancel" id="btnCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get DOM elements
+        const sendBtn = document.getElementById('sendBtn');
+        const confirmModal = document.getElementById('confirmModal');
+        const btnOk = document.getElementById('btnOk');
+        const btnCancel = document.getElementById('btnCancel');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        // Show confirmation dialog when Send button is clicked
+        sendBtn.addEventListener('click', function() {
+            confirmModal.style.display = 'flex';
+        });
+        
+        // Handle OK button click
+        btnOk.addEventListener('click', function() {
+            confirmModal.style.display = 'none';
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+        });
+        
+        // Handle Cancel button click
+        btnCancel.addEventListener('click', function() {
+            confirmModal.style.display = 'none';
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

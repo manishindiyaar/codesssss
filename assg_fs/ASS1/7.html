@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .clock {
+            background-color: #333;
+            padding: 20px 40px;
+            border-radius: 5px;
+            color: #17D4FE;
+            font-size: 60px;
+            font-weight: bold;
+            text-shadow: 2px 2px 20px #17D4FE;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+
+    <script>
+        function updateClock() {
+            // Get current time
+            const now = new Date();
+            
+            // Format hours, minutes, and seconds
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            
+            // Combine into time string
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            
+            // Update the display
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update clock immediately
+        updateClock();
+        
+        // Update clock every second
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

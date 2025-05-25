@@ -1,0 +1,79 @@
+<!-- Create a webpage with a script to:
+o Check if a number entered by the user is even or odd using conditionals.
+o Print numbers from 1 to 10 using a loop. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .output {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Number Operations</h2>
+
+    <!-- Even/Odd Checker -->
+    <div>
+        <h3>Even/Odd Checker</h3>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="checkEvenOdd()">Check</button>
+        <div id="result" class="output"></div>
+    </div>
+
+    <!-- Number Sequence -->
+    <div>
+        <h3>Numbers 1 to 10</h3>
+        <button onclick="printNumbers()">Show Numbers</button>
+        <div id="numberSequence" class="output"></div>
+    </div>
+
+    <script>
+        // Function to check if number is even or odd
+        function checkEvenOdd() {
+            let number = document.getElementById('numberInput').value;
+            let resultDiv = document.getElementById('result');
+            
+            if (number === '') {
+                resultDiv.textContent = 'Please enter a number';
+                return;
+            }
+
+            number = parseInt(number);
+            if (number % 2 === 0) {
+                resultDiv.textContent = `${number} is Even`;
+            } else {
+                resultDiv.textContent = `${number} is Odd`;
+            }
+        }
+
+        // Function to print numbers 1 to 10
+        function printNumbers() {
+            let sequenceDiv = document.getElementById('numberSequence');
+            let numbers = '';
+            
+            for (let i = 1; i <= 10; i++) {
+                numbers += i + ' ';
+            }
+            
+            sequenceDiv.textContent = numbers;
+        }
+    </script>
+</body>
+</html>

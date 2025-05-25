@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple UI</title>
+    <style>
+        
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+        }
+        nav ul li{
+            margin-right: 10px;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .hero{
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        #mainbtn{
+            background-color: #864141;
+            color: white;
+            
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 10px 20px;
+            align-items: center;
+            /* btn style non */
+            border: none;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        
+            background-color: #f4f4f4;
+        }
+        .place{
+            margin: 5px;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+        }
+        .c1{
+            
+            
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .c1 .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+    </style>
+    
+    
+</head>
+<body>
+    
+    <nav>
+        <div>
+            UAI event Hub
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <button id="mainbtn">View Event</button>
+    </div>
+   
+    <div class="cards" id="cards-container">
+        <!-- <div class="c1">
+            <div class="place"></div>
+            <div class="title"></div>
+            <div class="date"></div>
+            <div class="time"></div>
+            <div class="price"></div>
+            <div class="btn">Register</div>
+        </div> -->
+    </div>
+
+    <script>
+      const data = {
+            "cards": [
+                {
+                    "place": "New York",
+                    "title": "Tech Conference 2025",
+                    "date": "March 15, 2025",
+                    "time": "10:00 AM - 4:00 PM",
+                    "price": "$299",
+                    "btn": "Register"
+                },
+                {
+                    "place": "San Francisco",
+                    "title": "AI Summit 2025",
+                    "date": "April 20, 2025",
+                    "time": "9:00 AM - 5:00 PM",
+                    "price": "$399",
+                    "btn": "Register"
+                }
+            ]
+        };
+
+        const cardsContainer = document.getElementById('cards-container');
+
+        data.cards.forEach(card=>{
+            const cardElement = document.createElement('div');
+            cardElement.className= 'c1';
+            cardElement.innerHTML= `
+            <div class="place"><h4>${card.place}</h4></div>
+            <div class="title">${card.title}</div>
+            <div class="date">${card.date}</div>
+            <div class="time">${card.time}</div>
+            <div class="price">${card.price}</div>
+            <div class="btn">${card.btn}</div>
+
+            `;
+            cardsContainer.appendChild(cardElement);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frames Example</title>
+</head>
+<frameset rows="30%,70%">
+    <frame src="frame1.html" name="topFrame" scrolling="auto" noresize>
+    <frameset cols="25%,50%,25%">
+        <frame src="frame2.html" name="leftFrame" scrolling="auto" noresize>
+        <frame src="frame3.html" name="middleFrame" scrolling="auto" noresize>
+        <frame src="frame4.html" name="rightFrame" scrolling="auto" noresize>
+    </frameset>
+    <noframes>
+        <body>
+            Your browser does not support frames.
+        </body>
+    </noframes>
+</frameset>
+</html>

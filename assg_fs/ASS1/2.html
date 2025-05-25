@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    
+</head>
+<body>
+    
+    <script>
+       
+
+        // Function to perform arithmetic operations
+function calculateBasicMath(num1, num2) {
+    // Addition
+   
+    console.log(`Numbers being used: ${num1} and ${num2}`);
+    console.log("Addition:", num1 + num2);
+    
+    // Subtraction
+    console.log("Subtraction:", num1 - num2);
+    
+    // Multiplication
+    console.log("Multiplication:", num1 * num2);
+    
+    // Division
+    if (num2 !== 0) {
+        console.log("Division:", num1 / num2);
+    } else {
+        console.log("Division: Cannot divide by zero");
+    }
+    
+    // Modulus (Remainder)
+    console.log("Remainder:", num1 % num2);
+    
+    // Exponentiation
+    console.log("Exponentiation:", num1 ** num2);
+}
+
+
+calculateBasicMath(10, 5);
+
+
+calculateBasicMath(20, 3);
+
+console.log("\nTest Case with zero division:");
+calculateBasicMath(15, 0);
+
+    </script>
+</body>
+</html>
+
+<!-- Write a script to Perform basic arithmetic operations and log the results. -->

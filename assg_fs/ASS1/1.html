@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our page</h1>
+    
+    <script>
+        // Display welcome message
+        alert("Welcome to our website!");
+        
+        // Ask for user's name
+        let userName = prompt("Please enter your name:");
+        
+        // Display name in console
+        console.log("User's name:", userName);
+
+        // Function to perform arithmetic operations
+function calculateBasicMath(num1, num2) {
+    // Addition
+   
+    console.log(`Numbers being used: ${num1} and ${num2}`);
+    console.log("Addition:", num1 + num2);
+    
+    // Subtraction
+    console.log("Subtraction:", num1 - num2);
+    
+    // Multiplication
+    console.log("Multiplication:", num1 * num2);
+    
+    // Division
+    if (num2 !== 0) {
+        console.log("Division:", num1 / num2);
+    } else {
+        console.log("Division: Cannot divide by zero");
+    }
+    
+    // Modulus (Remainder)
+    console.log("Remainder:", num1 % num2);
+    
+    // Exponentiation
+    console.log("Exponentiation:", num1 ** num2);
+}
+
+
+calculateBasicMath(10, 5);
+
+
+calculateBasicMath(20, 3);
+
+console.log("\nTest Case with zero division:");
+calculateBasicMath(15, 0);
+
+    </script>
+</body>
+</html>
+
+
+<!-- 
+1. Create a webpage where:
+	- An alert box displays a welcome message.
+	-A prompt asks the user for their name and displays it in the console.
+
+-->
