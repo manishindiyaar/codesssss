@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More CSS</title>
+    <style>
+        .box:first-child {
+            background-color: blueviolet;
+        }
+
+        .box::first-line {
+            color: rgb(37, 37, 2);
+        }
+
+        .boxes {
+            /* color: blue; */
+            border: 2px solid black;
+        }
+
+        .boxes::before {
+            content: "My Name is ManJEET";
+            color: blue;
+
+        }
+
+        .boxes::after {
+            content: "Sigma Developer";
+            color: red
+        }
+
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            color: rgb(72, 72, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary"> I am First</div>
+        <div class="box">SomeThing</div>
+        <div class="box">SomeThing</div>
+        <div class="box">SomeThing</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>

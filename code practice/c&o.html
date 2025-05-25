@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSES & OBJECT</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name: "Manjeet",
+            marks: 73,
+            printMarks: function(){
+                console.log("My Marks", this.marks);
+            }
+        };
+
+        const employee={
+            calcTax(){
+                console.log("Tax 18%")
+            }
+        }
+        const Manjeet ={
+            salary: 50000,
+        }
+        Manjeet.__proto__ = employee;
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+/* CSS Styles */
+.header {
+background-color: #c9c9c9;
+padding: 20px;
+}
+
+.nav {
+background-color: #333;
+
+padding-left: 20px;
+padding-top: 40px;
+padding-bottom: 70px;
+
+
+
+}
+
+.main-content {
+padding: 20px;
+}
+
+.footer {
+background-color: #373434;
+padding: 10px
+}
+/* CSS Styles */
+.rectangle {
+margin-top: 20px;
+margin-left: 40px;
+width: 100px;
+height: 100px;
+background-color: #0fadeb; /* Blue color, you can use any color you prefer */
+border: 1px solid #000; /* Add a border, if you want */
+}
+.star {
+position: relative;
+width: 0;
+height: 0;
+}
+.point {
+position: absolute;
+margin: 200px;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-bottom: 35px solid #007bff; /* Blue color, you can use any color you prefer */
+transform-origin: 50% 50%;
+}
+.point:nth-child(1) {
+transform: rotate(18deg) translateY(-45px);
+}
+
+.point:nth-child(2) {
+transform: rotate(54deg) translateY(-45px);
+}
+
+.point:nth-child(3) {
+transform: rotate(90deg) translateY(-45px);
+}
+
+.point:nth-child(4) {
+transform: rotate(126deg) translateY(-45px);
+}
+
+.point:nth-child(5) {
+transform: rotate(152deg) translateY(-45px);
+}
+.point:nth-child(6){
+transform: rotate(172deg) translateY(-45px);
+}
+.point:nth-child(7){
+transform: rotate(192deg) translateY(-45px);
+}
+.point:nth-child(8){
+transform: rotate(220deg) translateY(-45px);
+}
+.point:nth-child(9){
+transform: rotate(242deg) translateY(-45px);
+}
+.point:nth-child(10){
+transform: rotate(262deg) translateY(-45px);
+}
+.point:nth-child(11){
+transform: rotate(282deg) translateY(-45px);
+}
+.point:nth-child(12){
+transform: rotate(302deg) translateY(-45px);
+}
+.point:nth-child(13){
+transform: rotate(322deg) translateY(-45px);
+
+}
+.point:nth-child(14){
+transform: rotate(342deg) translateY(-45px);
+
+}
+.point:nth-child(15){
+transform: rotate(362deg) translateY(-45px);
+}
+
+.card{
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solic #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+.card-content{
+    font-size:16px;
+    line-height: 1.5;
+}

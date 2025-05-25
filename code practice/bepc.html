@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <!--<div id="container" onmouseenter="alert('Entered!')" onclick="console.log('Clicked!')">J</div> -->
+     <button id="btn">click</button>
+     <script>const x = function(e){
+        console.log(e.type, e.clientX, e.clientY); // click 29 70 (values will change depending upon where u clicked the button)
+    };
+    btn.addEventListener('click', x);
+    
+    </script>
+</body>
+</html>

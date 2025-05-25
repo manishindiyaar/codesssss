@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mark Completed List Items</title>
+    <style>
+        /* Add your CSS styles here if needed */
+li {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.checked {
+    color: green; /* Change the color or add any other styles for the checked state */
+}
+
+    </style>
+</head>
+<body>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <!-- Add more list items as needed -->
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Get all list items
+    var listItems = document.querySelectorAll('#myList li');
+
+    // Add click event listeners to each list item
+    listItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // Toggle the 'checked' class to mark completion
+            this.classList.toggle('checked');
+
+            // Optionally, you can also toggle an SVG icon
+            toggleCheckIcon(this);
+        });
+    });
+
+    function toggleCheckIcon(listItem) {
+        // Check if the list item has the 'checked' class
+        var isChecked = listItem.classList.contains('checked');
+
+        // Get the first child of the list item (assuming it's an SVG)
+        var svgIcon = listItem.firstChild;
+
+        // Toggle the visibility of the SVG based on the 'checked' state
+        svgIcon.style.display = isChecked ? 'inline' : 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

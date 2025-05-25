@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label & Other </title>
+</head>
+<body>
+    <form action="post" method="post">
+    <!-- Label -->
+    <label for="comment">Enter comment</label>
+    <textarea name="comment" id="comment" cols="50" rows="14"></textarea>
+    <!-- Select DropDown -->
+   <select name="Technology" id="tech">
+    <option value="web3">Web3</option>
+    <option value="ai">AI</option>
+    <option value="ml">ML</option>
+   </select>
+   <br>
+    
+    <!-- Other -->
+    <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Subscribe to newsletter</label>
+    </div>
+
+
+    <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+
+    <div>
+        <label for="username">Enter your Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" autofocus>
+    </div>
+    <div>
+    </form>
+</body>
+</html>

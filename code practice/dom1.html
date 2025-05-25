@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>Hire me</li>
+        </ul>
+       </nav>
+    
+       <div class="container">
+        <p>Hey, this is a simple test website</p>
+       </div>
+
+
+       <script>
+
+        let firstChild= document.body.firstChild;
+        console.log(firstChild);
+
+        let firstElementChild = document.body.firstElementChild;
+        console.log(firstElementChild);
+
+        const bgChange = ()=>{
+           document.body.firstElementChild.style.background = "red";
+        }
+        // bgChange();
+        let div = document.querySelector("div");
+        console.log(div);
+        div.style.backgroundColor = "green";
+        div.style.color = "white";
+        div.style.fontSize= "34px";
+
+       </script>
+</body>
+</html>

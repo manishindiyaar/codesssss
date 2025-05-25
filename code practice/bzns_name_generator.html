@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Name Generator</title>
+</head>
+<body>
+    <script>
+        const primaryName={
+            firstWord : "Naveen",
+            secondWord : "Bawaal",
+            thirdWord: "Okkkaaa",
+            fourthWord: "Jameel",
+            fifthWord :"Mansaar",
+            sixthWord:"Khushiyaa",
+            seventhWord:"Aamir",
+            eighthWord:"Shaan",
+            ninthWord:"Rahul",
+            tenthWord:"Zeeshan",
+            eleventhWord:"Shazia",
+            twelfthWord:"Farooq",
+        }
+
+        const secondaryName={
+            firstWord : "Cater",
+            secondWord : "Service",
+            thirdWord : "factory",
+            fourthWord : "Inc.",
+            fifthWord: "Ltd.",
+            sixthWord:"Co.",
+            sevenWord: "Service",
+            eightWord: "Solutions",
+            nineWord: "Corp.",
+            tenthWord: "Center",
+            elevenWord: "Group",
+            twelveWord: "Pvt Ltd."
+            };
+function getRandomWord(obj){
+    const keys = Object.keys(obj);
+    const RandomWord = keys[Math.floor(Math.random()*12)]
+    return obj[RandomWord];
+}
+function getBusinessName(primary, secondary){
+    const firstName = getRandomWord(primary);
+    const secondName = getRandomWord(secondary);
+    let businessName = `${firstName} ${secondName}`;
+    return businessName;
+}
+const BusinessName = getBusinessName(primaryName, secondaryName);
+console.log(BusinessName);
+          
+    </script>
+</body>
+</html>

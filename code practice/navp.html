@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavP</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylenav.css">
+    
+    
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">
+    <a href="#"><img src="images/manishadmin.jpg" alt="Mylogo" style=" width: 42px; height: 40px;"></a>
+    
+</div>
+    <ul class="navlink" >
+    <li class="dropdown-btn">Menu</li>
+    <div class="dropdown-menu">
+    <li><a href="">Home</a></li>
+    <li><a href="">Feature</a></li>
+    <li><a href="">ABOUT</a></li>
+    <li><a href="">Connect</a></li>
+</div>
+  </ul>
+</nav>
+
+<div class="bg-slate-950 text-white">Hii</div>
+
+<!-- At the bottom of the <body> section -->
+    <script>
+        const dropdownButton = document.querySelector('.dropdown-btn');
+    
+        dropdownButton.addEventListener('click', () => {
+            dropdownButton.classList.toggle('active');
+        });
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Page</title>
+
+    <style>
+        .colorbox{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 50px ;    
+        }
+        .color{
+            min-width: 44px;
+    height: 44px;
+    background-color: red;
+    border-radius: 50px ;
+    cursor: pointer;
+    transition: scale 0.3s ease;
+    /* padding-block: 10px; */
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+
+        }
+        #orange{
+            background-color: orange;
+        }
+        #violet{
+            background-color: violet;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="colorbox">
+        <div class="color" id="red"></div>
+        <div class="color" id="blue"></div>
+        <div class="color" id="orange"></div>
+        <div class="color" id="violet"></div>
+        <div class="color" id="black"></div>
+        
+    </div>
+
+    <script>
+
+        const color = document.querySelectorAll('.color');
+        const body = document.querySelector('body');
+        color.forEach(item=>item.addEventListener('click', ()=>
+       {
+        const colorName= item.id;
+        
+        document.body.style.backgroundColor = colorName;
+       } ))
+    </script>
+</body>
+</html>

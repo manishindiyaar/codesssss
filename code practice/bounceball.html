@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Ball Animation </title>
+</head>
+<style>
+    .container{
+        width: 700px;
+        height: 600px;
+        background-color: blue;
+        position: relative;
+    }
+    .box{
+        border: 2px solid red;
+        background-color: red;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+        
+       
+    }
+    @keyframes animateX {
+        form{
+             left:0;
+        }
+        to{
+             left: 100%;
+        }
+        
+    }
+    @keyframes animateY{
+        from{
+            bottom: 0;
+
+        }
+        to{
+            bottom: 100%;
+
+        }
+    }
+</style>
+<body>
+      <div class="container">
+        <div class="box">
+
+        </div>
+      </div>
+</body>
+</html>

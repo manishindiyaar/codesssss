@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Confirm Box</h2>
+    <button onclick="myFunction()" >Try it</button>
+    <p id="demo"></p>
+    <br>
+
+    <h2>JavaScript Prompt</h2>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="remo"></p>
+
+
+    <h2>JavaScript Prompts</h2>
+    <button onclick="getPromptDetail()">Try it</button>
+    <p id="semo"></p>
+    <p id="subject"></p>
+
+    <h2>JS Arithmatic operation</h2>
+    <form >
+        Enter No: <input type="text" id="number"/> <br/> 
+        <input type="button" value="cube" onclick="getCube()"/>
+       </form>
+    <h2>Input Radio Event Listener</h2>
+    <p>
+
+    <input type="radio" name="rate" value="Very Poor">Very Poor <br>
+    <input type="radio" name="rate" value="Poor">Poor <br>
+    <input type="radio" name="rate" value="Good">Good <br>
+    <input type="radio" name="rate" value="Very Good">Very Good <br>
+    <input type="radio" name="rate" value="Excellent">Excellent <br>
+        
+</p>
+
+    <p >
+        <button id="btnRate">Submit</button>
+    </p>
+
+    <script>
+        function myFunction() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function myFunction2() {
+            let text;
+            let person = prompt("Please enter your name:", "Proffessor")
+            if (person == null || person == ""){
+                text = "User cancelled the prompt";
+
+            }else{
+                text = "Hello " +person+ "! How are you today?";
+
+            }
+            document.getElementById("remo").innerHTML = text;
+        }
+
+        function getPromptDetail(){
+            var name = prompt("What is your name ?");
+            var id = prompt("what is your id?");
+            
+            data1 = "hello , my name is "+ name;
+            data2 = "your id is " + id;
+       
+            var sub1 = prompt("Enter your Marks of Maths");
+            var sub2 = prompt("Enter your Marks of Science");
+            var sub3 = prompt("Enter your Marks of English");
+            var total = parseInt(sub1) + parseInt(sub2) + parseInt(sub3);
+
+            document.getElementById("semo").innerHTML = data1 + "<br>" + data2;
+            document.getElementById("subject").innerHTML = sub1 + "<br>" + sub2 + "<br>" + sub3;
+        }
+
+        function getCube(){
+            var number=document.getElementById("number").value;
+            alert(number*number*number);
+        }
+
+        let btn = document.getElementById('btnRate');
+
+        btn.addEventListener('click', ()=>{
+            let rates = document.getElementsByName('rate');
+            rates.forEach((rate) => {
+                if(rate.checked){
+                    alert('You have rated ' + rate.value);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

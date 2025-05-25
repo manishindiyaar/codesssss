@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MastJs</title>
+        <script>
+            function Hello(){
+                const header = document.querySelector('h1')
+                if(header.innerHTML === 'Whats Going on?'){
+                    header.innerHTML ='Just Enjoy!'
+                }
+                else{header.innerHTML = 'What are You Doing?'}
+
+            }
+            function Hii(){
+                const header = document.querySelector('h1')
+                if (header.innerHTML === 'What are You Doing?'){
+                    header.innerHTML = 'Thanks for Asking!'
+              } else{header.innerHTML = 'Goodbye! All the Best'
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Whats Going on?</h1>
+        <button onclick="Hello()">All Good!</button>
+        <button onclick="Hii()">Nothing</button>
+    </body>
+
+</html>
