@@ -1,0 +1,3 @@
+To Run the Program -> node script.js
+To Run the Program one Time -> npx nodemon script.js
+

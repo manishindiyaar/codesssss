@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather in Delhi</h1>
+        <div class="weather-info">
+            <p>Temperature: <span id="temperature">Loading...</span></p>
+            <p>Description: <span id="description">Loading...</span></p>
+        </div>
+    </div>
+    <script>
+        fetch('/weather')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("temperature").textContent = `${data.temperature}°C`;
+                document.getElementById("description").textContent = data.description;
+            })
+            .catch(error => console.error("Error fetching weather data:", error));
+    </script>
+</body>
+</html>

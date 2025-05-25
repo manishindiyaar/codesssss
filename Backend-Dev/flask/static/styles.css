@@ -1,0 +1,61 @@
+/* Apply the Poppins font to the entire body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+    color: #ffffff;
+}
+
+/* Centered container for the weather content */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Stylish title with an emoji for a friendly touch */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Weather info styling */
+.weather-info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Highlight the temperature */
+#temperature {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Smooth transition for hovering effects */
+.weather-info p span {
+    transition: color 0.3s;
+}
+
+/* Interactive hover effect */
+.weather-info p:hover span {
+    color: #f39c12;
+}
+
+/* Subtle animation for loading state */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+#temperature, #description {
+    animation: pulse 1.5s infinite;
+}

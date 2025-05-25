@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        input, button { padding: 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form id="weather-form">
+        <input type="text" id="city" placeholder="Enter city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.getElementById('weather-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const city = document.getElementById('city').value;
+            const response = await fetch('http://127.0.0.1:8000/weather/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ city })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerHTML = `
+                <p>City: ${data.city}</p>
+                <p>Temperature: ${data.temperature} °C</p>
+                <p>Description: ${data.description}</p>
+                <p>Humidity: ${data.humidity}%</p>
+            `;
+        });
+    </script>
+</body>
+</html>
