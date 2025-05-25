@@ -1,0 +1,46 @@
+@media only screen and (max-width: 900px) {
+    body {
+      background-color: rgb(168, 164, 164)
+    }
+    nav ul{
+        background: rgba(76, 76, 76, 0.457);
+        backdrop-filter: blur(10px);
+        
+    }
+    .bottom{
+        height: 160px;
+    }
+    .songInfo{
+    position: absolute;
+    left: 10vw;
+    bottom: 130px;
+    font-family: 'Varela Round', sans-serif;
+    justify-content: center;
+    align-items: center;
+    }
+    .songItemContainer{
+        margin: 3px 5px;
+        font-size: 9px;
+    }
+    .songItem{
+        padding: 0 14px;
+
+    }
+    .wtxt{
+    font-size: 15px;
+    color: white;
+    border: 1px solid rgb(242, 241, 241);
+    margin: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 8px;
+    }
+  }
+  @media only screen and (max-width: 1300px){
+.wtxt{
+    margin: auto;
+}
+.mm1, .mm2{
+    display: none;
+}
+  }

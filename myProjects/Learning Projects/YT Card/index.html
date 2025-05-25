@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Card Update</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Update Youtube Video Card Information</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="left">
+                    <img src="image/thumbnailcwh01.webp"> 
+                    <span>31:20</span>
+                </div>
+                <div class="right">
+                    <h2 id="title">Installing VS Code &amp; How Websites Work | Sigma Web Development Course</h2>
+                    <span id="channel" >CodeWithHarry</span>
+                    <span id="views">741,385 views</span>
+                    <span>2 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="controller">
+        <div class="section">
+            <label for="number">Enter Number of Views</label>
+            <input type="number" name="number" id="views-input">
+
+            <label for="text">Channel Name</label>
+            <input type="text" id="channel-input">
+
+            <label for="text">Title</label>
+            <input type="text" id="title-input">
+
+        </div>
+        <button class="UpdateBtn" onclick="updateCard()"> Update </button>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

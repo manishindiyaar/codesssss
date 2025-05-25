@@ -1,0 +1,17 @@
+/* Resetting the default styles of elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  /* Providing a consistent foundation for styling the page */
+  
+  body {
+    box-sizing: border-box;
+    position: relative;
+  }

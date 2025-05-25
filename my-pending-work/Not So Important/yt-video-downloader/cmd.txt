@@ -1,0 +1,3 @@
+npm init -> To Initiate NodeJs npm
+npm install --save express body-parser  -> Install Express and body-parser to power up your Node.js server with routing and request body parsing.
+npm install --save ytdl-core  -> to add a package enabling YouTube video downloading 

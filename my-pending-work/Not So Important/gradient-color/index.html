@@ -1,0 +1,134 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vite - Next Generation Frontend Tooling</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .bright{
+    width: 700px;
+    height: 300px;
+    font-size: 200px;
+    text-align: center;
+    
+  }
+
+  .gradient-background {
+    background-image: linear-gradient(to right, #9900ff, #0f58d5);
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 20px;
+    
+  }
+
+  .button {
+    background-color: #ffffff;
+    color: #6a11cb;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div >
+    <div>
+  <h1>Vite</h1>
+  <div class="tagline">Next Generation Frontend Tooling</div>
+  <div>Get ready for a development environment that can finally catch up with you.</div>
+  <div class="buttons-container">
+    <a href="#" class="button">Get Started</a>
+    <a href="#" class="button">Why Vite?</a>
+    <a href="#" class="button">View on GitHub</a>
+    
+  </div>
+</div>
+<div class="gradient-background bright">d</div>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Background Example</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gradient-background {
+    height: 1000px;
+    width: 1000px;
+    background: radial-gradient(circle, rgb(118, 69, 166) 5%, rgb(45, 44, 100) 30%, rgb(6, 6, 8) 60%, rgb(0, 0, 0) 100% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+    
+
+  }
+  .morpho{
+    backdrop-filter: blur(10px);
+    height: 1000px;
+    width: 1000px;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    width: 200px; /* Adjust as necessary */
+    height: auto;
+    /* backdrop-filter: blur(40px); */
+    
+    
+  }
+</style>
+</head>
+<body>
+<div class="gradient-background">
+    <div class="morpho"></div>
+  
+  <img src="https://vitejs.dev/logo-with-shadow.png
+  " alt="Logo">
+</div>
+</body>
+</html>

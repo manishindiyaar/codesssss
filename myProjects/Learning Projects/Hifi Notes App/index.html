@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hifi Note</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="leftsidecontainer">
+                <div class="headside">
+                    <h2>HiFi Note</h2>
+                    <h3>Craft Your Notes</h3>
+                    <div class="line"></div>
+ 
+                    <!-- UPDATE DELETE BUTTON -->
+                    <div class="update-delete-menu">
+                        <div class="update"><span class="material-symbols-outlined">
+                            edit_square
+                            </span></div>
+                        <div class="delete"><span class="material-symbols-outlined">
+                            delete
+                            </span></div>
+                    </div>
+
+                   <!-- NOTES LIST SECTION -->
+                    <div class="notelist modification-menu">
+                        <ul class="created-notes">
+                            
+                            <!-- <li class="listbox">
+                                <h3 class="notes-list_heading">Your Headings....</h3>
+                                <p class="note-list_content">first Data</p>
+                                <p class="notes-list_data" id="current-date">April 22, 2023</p>
+                                <div class="selected-note">
+                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" style="fill: rgb(251, 248, 248);transform :msFilter;"><path d="M7 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm4 10.414-2.707-2.707 1.414-1.414L11 12.586l3.793-3.793 1.414 1.414L11 15.414z"></path></svg></div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="rightsidecontainer">
+                <div class="titlebox">
+                    <input type="text" class="title" placeholder="TITLE">
+                    <div class="ctime"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" style="fill: rgb(244, 240, 240);transform: msFilter;">
+                            <path
+                                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                            </path>
+                            <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
+                        </svg>2 Dec 2023</div>
+                </div>
+                <!-- <div class="btns-right-section">
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div> -->
+                <div class="notebox">
+                    <textarea name="Notes" id="notes" cols="30" rows="10"
+                        placeholder="Start Typing Your Idea!"></textarea>
+                </div>
+
+                <div class="submitbtn">
+                    <button class="okbtn" ><span class="material-symbols-outlined" style="font-size: 34px;">
+                        check_circle
+                        </span>OK</button>
+                </div>
+                <!-- Color Changing Feature -->
+                <div class="colorboxsection">
+                    <ul class="change-color">
+                        <li class="color" id="purple"></li>
+                        <li class="color" id="green"></li>
+                        <li class="color" id="red"></li>
+                        <li class="color" id="amber"></li>
+                        <li class="color" id="blue"></li>
+                        <li class="color" id="gray"></li>
+                        <li class="color" id="teal"></li>
+                        <li class="color" id="dark-blue"></li>
+                        <li class="color" id="orange"></li>
+                        <li class="color" id="pink"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

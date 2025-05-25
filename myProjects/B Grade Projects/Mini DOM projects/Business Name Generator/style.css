@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: beige; */
+    width: 50%;
+
+}
+.header .image{
+    width: 50%;
+    height: 400px;
+    /* background-color: azure; */
+    border: 1px solid black;
+}
+.header .text h1{
+    margin: 7px auto;
+    font-size: 64px;
+}
+.header .text p{
+    font-size: 20px;
+    margin: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Main Section */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+.main h1{
+    /* border: 2px solid rgb(124, 123, 123); */
+    padding: 15px;
+    border-radius: 10px;
+    /* gradient */
+    background: linear-gradient(to right bottom, #e06b04 ,#0e8a8a );
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0
+    16px 32px 0 rgba(0,0,0,0.19);
+
+}
+.main .category{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 30px;
+}
+.main .category .option{
+    padding: 10px;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0
+    16px 32px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+}
+
+.selectOpt{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    display: none;
+}
+.selectOpt .selectBtn{
+    padding: 10px 50px;
+    border: 1px transparent;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(50, 50, 121);
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0
+    16px 32px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+.bname{
+    font-size: 2em;
+    color: rgb(87, 57, 1);
+    text-shadow: -2px -2px 4px  rgb(255, 85, 0);
+    border-bottom: 2px solid rgb(139, 139, 5);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Matrix Theme</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            overflow: hidden;
+            color: #00ff00;
+        }
+        h1 {
+            color: #00ff00;
+            z-index: 1;
+        }
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .matrix div {
+            position: absolute;
+            top: -100px;
+            width: 10px;
+            height: 100px;
+            background: linear-gradient(transparent, #00ff00);
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                top: -100px;
+            }
+            100% {
+                top: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div class="matrix"></div>
+    <script>
+        const matrix = document.querySelector('.matrix');
+        const columns = Math.floor(window.innerWidth / 10);
+        for (let i = 0; i < columns; i++) {
+            const div = document.createElement('div');
+            div.style.left = `${i * 10}px`;
+            div.style.animationDelay = `${Math.random() * 5}s`;
+            matrix.appendChild(div);
+        }
+    </script>
+</body>
+</html>

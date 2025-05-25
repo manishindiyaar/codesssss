@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+
+}
+
+/*Nav Style*/
+.navigation {
+  height: 110px;
+  font-family: var(--font1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+
+
+}
+
+.nav-left {
+  font-size: 20px;
+
+}
+
+.nav-left span {
+  margin: 30px;
+  width: 45px;
+
+}
+
+.nav-left img {
+  border: 0.3px solid rgb(3, 169, 239);
+  border-radius: 50%;
+  margin-top: 15px;
+  display: flex;
+  cursor: pointer;
+
+}
+.nav-left img:hover{
+  transform: scale(1.1);
+  border: 1px solid rgb(16, 194, 179);
+  
+}
+
+
+.nav-left ul {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  margin-left: 23px;
+  left: 56px;
+  bottom: 67px;
+
+}
+
+.nav-left ul li {
+  list-style: none;
+  margin: 0 35px;
+  font-family: var(--font2);
+  transition: all 0.6 ease-in-out;
+
+
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.nav-left ul li a:hover {
+  font-weight: bolder;
+
+}
+.navigation .right  input[type="text"]{
+  border: 0.5px solid black;
+
+}
+.navigation .right .form-input {
+  padding: 0 5px;
+  padding-top: 3px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin: 0 13px;
+  font-family: var(--font2);
+  background-color: white;
+}
+
+/*Nav style ends*/
+
+/*Main View Content */
+
+.content {
+  height: 100%;
+  display: flex;
+  margin-top: 32px;
+  padding: 9px;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.content::after {
+  content: "";
+  background-image: url(images/laptopwork.jpg);
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 1;
+  
+}
+
+.content-left {
+  font-family: var(--font1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 49px;
+  z-index: 1;
+}
+
+.content-left h1 {
+  font-family: var(--font3);
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.content-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-right img {
+  /* height: 100px; */
+  border-radius: 100px  200px 0 0;
+  width: 200px;
+  height: 200px;
+  border: 0.1px solid transparent;
+  /* padding: 10px; */
+  object-fit: cover;
+  /* object-position:inherit; */
+  
+  
+
+
+
+
+}
+
+
+/* Main Blog Content Section*/
+.home-articles {
+  padding: 18px;
+  background-color: rgba(255, 252, 252, 0.573);
+  margin-top: 20px;
+  position: relative;
+}
+
+/*Year Filtering Box*/
+.year-box {
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  width: 160px;
+  right: 42.5px;
+  height: 100px;
+  font-size: 18px;
+}
+
+.year-box div {
+  margin: 12px 0px;
+}
+
+/*Year Box End*/
+
+.home-article {
+  display: flex;
+  margin: 25px;
+}
+
+.home-article img {
+  width: 300px;
+}
+
+.home-article-content {
+  align-self: center;
+  padding: 25px;
+}
+
+.home-article-content a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*FOOTER*/
+.footer {
+  height: 23px;
+}
+.image img{
+  border-radius: 10px;
+
+}
+
+/* Card Component */
+.cards{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.mainupdate{
+  display: flex;
+  /* align-items: start; */
+  /* justify-content: center; */
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  /* margin: 0 1050px 0 40px; */
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 400px;
+}
+.mainupdate .cat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.mainupdate .cat .catg{
+  border: 0.8px solid black;
+  padding: 5px 30px;
+  margin: 10px 0 5px 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.mainupdate .cat .catg:nth-child(2){
+  background-color: green;
+  color: white;
+}
+.mainupdate .cat .catg:nth-child(1){
+  background-color: green;
+  color: white;
+}
+.mainupdate .cat .catg:nth-child(3){
+  background-color: rgb(1, 78, 123);
+  color: white;
+}
+.inform h2{
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
+}
+.inform  .para{
+  font-size: 14px;
+  padding: 10px;
+  font-size: 15px;
+  border: 0.1px solid black;
+  border-radius: 2px;
+
+}
+.inform button{
+  border: none;
+  padding: 8px 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: rgb(167, 25, 25);
+  color: white;
+  cursor: pointer;
+}
+
